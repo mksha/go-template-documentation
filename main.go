@@ -1,7 +1,8 @@
 package main
 
 import (
-	"./custompkg"
+	// "./custompkg"
+	"github.com/mohit-kumar-sharma/go-template-documentation/custompkg"
 	"fmt"
 )
 
