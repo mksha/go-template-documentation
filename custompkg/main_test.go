@@ -12,11 +12,11 @@ func TestCustomsum(t *testing.T) {
 	}
 	// data for table tests
 	testcases := []testcase{
-		testcase{[]int{1, -1}, 0},
-		testcase{[]int{1, 2}, 3},
-		testcase{[]int{1, 2, 3}, 6},
-		testcase{[]int{1, 2, 3, 4}, 10},
-		testcase{[]int{1, 2, 3, 4, 5}, 15},
+		{[]int{1, -1}, 0},
+		{[]int{1, 2}, 3},
+		{[]int{1, 2, 3}, 6},
+		{[]int{1, 2, 3, 4}, 10},
+		{[]int{1, 2, 3, 4, 5}, 15},
 	}
 
 	for _, tc := range testcases {
@@ -29,8 +29,10 @@ func TestCustomsum(t *testing.T) {
 
 func TestCustomAvg(t *testing.T) {
 	s := []int{1, 2, 3, 4, 5}
-	v := CustomAvg(s)
-	if v != 3 {
+
+	const out = 3
+
+	if v := CustomAvg(s); v != out {
 		t.Error("Expected 3, got", v)
 	}
 }

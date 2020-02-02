@@ -11,6 +11,7 @@ func customsum(s []int) int {
 	for _, v := range s {
 		sum += v
 	}
+
 	return sum
 }
 
@@ -18,8 +19,11 @@ func customsum(s []int) int {
 // elements of a slice
 func CustomAvg(s []int) float64 {
 	var avg float64
+
 	sum := customsum(s)
 	n := len(s)
+
 	avg = float64(sum / n)
+
 	return avg
 }
